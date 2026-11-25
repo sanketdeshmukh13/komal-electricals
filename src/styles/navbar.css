@@ -1,0 +1,137 @@
+.site-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #e9edf2;
+}
+
+.navbar-container {
+  max-width: 1440px;
+  min-height: 82px;
+  margin: auto;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #14283d;
+}
+
+.logo-symbol {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: #f07824;
+  color: white;
+  font-size: 27px;
+  font-weight: 900;
+  border-radius: 8px;
+  transform: skew(-5deg);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+.brand-text span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links > a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #405064;
+  transition: color 0.3s ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a.active {
+  color: #f07824;
+}
+
+.nav-links .nav-quote-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f07824;
+  color: white;
+  padding: 14px 19px;
+  border-radius: 5px;
+}
+
+.nav-links .nav-quote-btn:hover {
+  background: #d96313;
+  color: white;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #14283d;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    padding: 25px 6%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links .nav-quote-btn {
+    justify-content: center;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
