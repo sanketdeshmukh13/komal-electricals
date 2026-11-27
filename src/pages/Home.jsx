@@ -31,6 +31,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import HomeSlider from "../components/HomeSlider";
+import IndustriesSlider from "../components/IndustriesSlider";
 /* ==========================================
    KOMAL ELECTRICALS - HOMEPAGE
    Logo: public/images/komal-logo.png
@@ -858,15 +859,26 @@ function Home() {
   overflow: hidden;
 }
 
+.ke-product-image {
+  height: 270px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
 .ke-product-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 12px;
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: center;
   transition: transform .7s ease;
 }
 
 .ke-product-card:hover .ke-product-image img {
-  transform: scale(1.1);
+  transform: none;
 }
 
 .ke-product-tag {
@@ -1770,6 +1782,7 @@ function Home() {
             1. HERO SECTION
         ================================== */}
         <HomeSlider />
+        <IndustriesSlider />;
         <section className="ke-hero">
           <div className="ke-hero-inner">
             <div className="ke-hero-content">
@@ -1847,11 +1860,9 @@ function Home() {
             <span>SCROLL TO DISCOVER ↓</span>
           </div>
         </section>
-
         {/* ==================================
             2. COMPANY HIGHLIGHTS
         ================================== */}
-
         <section className="ke-trust-strip">
           <div className="ke-trust-item">
             <Factory />
@@ -1885,11 +1896,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             3. ABOUT COMPANY
         ================================== */}
-
         <section className="ke-section">
           <div className="ke-container ke-about-grid">
             <div className="ke-about-image-wrap ke-reveal">
@@ -1953,11 +1962,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             4. FEATURED PRODUCTS
         ================================== */}
-
         <section className="ke-section ke-featured">
           <div className="ke-container">
             <SectionHeading
@@ -2019,11 +2026,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             5. ELECTRICAL PANEL SOLUTIONS
         ================================== */}
-
         <section className="ke-section ke-panels">
           <div className="ke-container">
             <SectionHeading
@@ -2056,11 +2061,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             6. WHY CHOOSE US
         ================================== */}
-
         <section className="ke-section ke-capabilities">
           <div className="ke-container">
             <SectionHeading
@@ -2087,11 +2090,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             7. INDUSTRIES WE SERVE
         ================================== */}
-
         <section className="ke-section ke-industries">
           <div className="ke-container">
             <SectionHeading
@@ -2120,11 +2121,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             8. MANUFACTURING SECTION
         ================================== */}
-
         <section className="ke-manufacturing">
           <div className="ke-manufacturing-visual">
             <div className="ke-manufacturing-label">
@@ -2178,11 +2177,9 @@ function Home() {
             </Link>
           </div>
         </section>
-
         {/* ==================================
             9. MANUFACTURING WORKFLOW
         ================================== */}
-
         <section className="ke-section ke-process">
           <div className="ke-container">
             <SectionHeading
@@ -2211,11 +2208,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             10. QUALITY COMMITMENT
         ================================== */}
-
         <section className="ke-section ke-quality">
           <div className="ke-container ke-quality-grid">
             <div className="ke-quality-visual ke-reveal">
@@ -2285,11 +2280,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             11. ENQUIRY CTA
         ================================== */}
-
         <section className="ke-cta">
           <div className="ke-cta-inner">
             <span className="ke-eyebrow">
@@ -2321,11 +2314,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             12. CONTACT INFORMATION
         ================================== */}
-
         <section className="ke-contact-strip">
           <div className="ke-contact-item">
             <div className="ke-contact-icon">
@@ -2360,11 +2351,9 @@ function Home() {
             </div>
           </div>
         </section>
-
         {/* ==================================
             13. FLOATING WHATSAPP
         ================================== */}
-
         <a
           href="https://wa.me/91XXXXXXXXXX?text=Hello%20Komal%20Electricals%2C%20I%20want%20to%20enquire%20about%20your%20products."
           target="_blank"
