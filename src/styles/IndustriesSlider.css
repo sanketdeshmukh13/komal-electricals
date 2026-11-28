@@ -53,10 +53,18 @@
   min-width: 0;
   overflow-x: auto;
   padding: 4px 2px 14px;
-  scroll-snap-type: x mandatory;
+
+  /* Smooth, controlled horizontal scrolling */
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 2px;
+
+  /* Better touch scrolling on mobile */
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
 }
 
 .industries-slider::-webkit-scrollbar {
@@ -70,15 +78,11 @@
   background: #101a2c;
   border: 1px solid rgba(148, 163, 184, 0.12);
   border-radius: 22px;
-  scroll-snap-align: start;
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s ease;
-}
 
-.industry-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.45);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+
+  transition: border-color 0.25s ease;
 }
 
 /* Keep the full image visible */
@@ -99,7 +103,7 @@
 }
 
 .industry-card:hover .industry-image img {
-  transform: scale(1.04);
+  transform: none;
 }
 
 .industry-card-content {
@@ -201,6 +205,7 @@
     gap: 14px;
     margin-right: -5.5%;
     padding-right: 5.5%;
+    scroll-snap-type: x proximity;
   }
 
   .industry-card {

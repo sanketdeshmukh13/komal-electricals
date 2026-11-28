@@ -12,8 +12,8 @@ function Navbar() {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Products", path: "/products" },
-    { name: "Industries", path: "/industries" },
-    { name: "Projects", path: "/projects" },
+    // { name: "Industries", path: "/industries" },
+    // { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -49,9 +49,9 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <Link to="/get-a-quote" className="nav-quote-btn" onClick={closeMenu}>
+          {/* <Link to="/get-a-quote" className="nav-quote-btn" onClick={closeMenu}>
             Get a Quote <ArrowUpRight size={17} />
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>

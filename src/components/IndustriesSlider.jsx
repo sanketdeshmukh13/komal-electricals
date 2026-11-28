@@ -74,7 +74,7 @@ export default function IndustriesSlider() {
           behavior: "smooth",
         });
       }
-    }, 1700); // Slides every 1 second
+    }, 3000); // Slides every 3 second
 
     return () => clearInterval(intervalId);
   }, []);

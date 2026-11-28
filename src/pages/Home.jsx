@@ -30,7 +30,7 @@ import {
   Building2,
   Sparkles,
 } from "lucide-react";
-import HomeSlider from "../components/HomeSlider";
+// import HomeSlider from "../components/HomeSlider";
 import IndustriesSlider from "../components/IndustriesSlider";
 /* ==========================================
    KOMAL ELECTRICALS - HOMEPAGE
@@ -1774,6 +1774,447 @@ function Home() {
     transform: none;
   }
 }
+  /* ==========================================
+   HOMEPAGE MOBILE RESPONSIVE OVERRIDES
+   Add at the END of the existing <style>
+========================================== */
+
+/* Prevent horizontal overflow */
+.ke-home {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.ke-home img,
+.ke-home svg {
+  max-width: 100%;
+}
+
+.ke-home .ke-container {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .ke-section {
+    padding: 72px 5%;
+  }
+
+  .ke-hero-inner {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 24px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .ke-hero h1 {
+    font-size: clamp(36px, 5.5vw, 58px);
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .ke-hero-visual {
+    min-width: 0;
+  }
+
+  .ke-about-grid,
+  .ke-quality-grid {
+    gap: 35px;
+  }
+
+  .ke-panel-grid,
+  .ke-capability-grid,
+  .ke-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ke-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ke-product-body {
+    padding: 24px;
+  }
+}
+
+/* Mobile phones and portrait tablets */
+@media (max-width: 768px) {
+  .ke-section {
+    padding: 56px 20px;
+  }
+
+  .ke-heading {
+    margin-bottom: 32px;
+  }
+
+  .ke-heading h2,
+  .ke-about-content h2,
+  .ke-manufacturing-content h2,
+  .ke-quality-content h2 {
+    font-size: clamp(27px, 7vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    overflow-wrap: anywhere;
+  }
+
+  .ke-heading p,
+  .ke-about-content > p,
+  .ke-manufacturing-content > p,
+  .ke-quality-content > p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* Hero */
+  .ke-hero {
+    min-height: auto;
+  }
+
+  .ke-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 48px 20px 100px;
+  }
+
+  .ke-hero-content {
+    min-width: 0;
+  }
+
+  .ke-hero-logo {
+    width: 140px;
+    height: 88px;
+    margin-bottom: 22px;
+  }
+
+  .ke-hero-label {
+    max-width: 100%;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .ke-hero h1 {
+    font-size: clamp(34px, 8.5vw, 48px);
+    line-height: 1.13;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+
+  .ke-hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .ke-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .ke-hero-actions .ke-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 16px;
+    text-align: center;
+  }
+
+  .ke-hero-location {
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 24px;
+  }
+
+  .ke-hero-visual {
+    min-height: 270px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .ke-orbit {
+    width: min(72vw, 270px);
+    height: min(72vw, 270px);
+  }
+
+  .ke-visual-card {
+    width: min(78%, 250px);
+    padding: 24px 18px;
+  }
+
+  .ke-visual-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+  }
+
+  .ke-visual-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ke-visual-card h3 {
+    font-size: 18px;
+  }
+
+  .ke-floating-label {
+    max-width: 72%;
+    padding: 10px 12px;
+    font-size: 10px;
+    gap: 7px;
+  }
+
+  .ke-float-top {
+    top: 0;
+    right: 0;
+  }
+
+  .ke-float-bottom {
+    bottom: 0;
+    left: 0;
+  }
+
+  .ke-hero-bottom {
+    left: 20px;
+    right: 20px;
+    gap: 12px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+
+  .ke-hero-bottom span {
+    max-width: 50%;
+  }
+
+  .ke-hero-bottom span:last-child {
+    text-align: right;
+  }
+
+  /* Highlights */
+  .ke-trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+    padding: 24px 20px;
+  }
+
+  .ke-trust-item {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .ke-trust-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ke-trust-item strong {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .ke-trust-item span {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  /* Section grids */
+  .ke-about-grid,
+  .ke-quality-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .ke-about-image-wrap {
+    padding: 0 20px 25px 0;
+  }
+
+  .ke-about-image {
+    height: clamp(250px, 70vw, 380px);
+  }
+
+  .ke-about-logo {
+    width: 130px;
+    padding: 8px;
+    border-width: 3px;
+  }
+
+  .ke-about-logo img {
+    height: 75px;
+  }
+
+  .ke-product-grid,
+  .ke-panel-grid,
+  .ke-capability-grid,
+  .ke-industry-grid,
+  .ke-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .ke-product-card,
+  .ke-panel-card,
+  .ke-capability-card,
+  .ke-industry-card,
+  .ke-process-card {
+    min-width: 0;
+  }
+
+  .ke-product-image {
+    height: clamp(210px, 60vw, 300px);
+  }
+
+  .ke-product-body {
+    padding: 22px;
+  }
+
+  .ke-product-body p,
+  .ke-panel-card p {
+    min-height: 0;
+  }
+
+  .ke-panel-card,
+  .ke-capability-card,
+  .ke-industry-card,
+  .ke-process-card {
+    padding: 23px;
+  }
+
+  /* Manufacturing */
+  .ke-manufacturing {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ke-manufacturing-visual {
+    min-height: 300px;
+  }
+
+  .ke-manufacturing-label {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 16px 18px;
+  }
+
+  .ke-manufacturing-content {
+    padding: 48px 20px;
+  }
+
+  /* Quality */
+  .ke-quality-visual {
+    min-height: 300px;
+    padding: 25px 20px;
+  }
+
+  .ke-quality-visual h3 {
+    font-size: 22px;
+  }
+
+  /* CTA and contact */
+  .ke-cta {
+    padding: 56px 20px;
+  }
+
+  .ke-cta h2 {
+    font-size: clamp(29px, 7.5vw, 42px);
+    letter-spacing: -0.8px;
+  }
+
+  .ke-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ke-cta-actions .ke-btn {
+    width: 100%;
+  }
+
+  .ke-contact-strip {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 28px 20px;
+  }
+
+  .ke-contact-item {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .ke-contact-item p {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .ke-section {
+    padding: 48px 16px;
+  }
+
+  .ke-hero-inner {
+    padding: 38px 16px 90px;
+  }
+
+  .ke-hero h1 {
+    font-size: clamp(31px, 8.5vw, 36px);
+  }
+
+  .ke-hero-visual {
+    min-height: 245px;
+  }
+
+  .ke-floating-label {
+    font-size: 9px;
+    padding: 9px 10px;
+  }
+
+  .ke-trust-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ke-product-body,
+  .ke-panel-card,
+  .ke-capability-card,
+  .ke-industry-card,
+  .ke-process-card {
+    padding: 20px;
+  }
+
+  .ke-product-image {
+    height: 220px;
+  }
+
+  .ke-hero-bottom {
+    font-size: 7px;
+  }
+
+  .ke-whatsapp {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px;
+  }
+}
+
+/* Make touch devices avoid hover-only movement */
+@media (hover: none) {
+  .ke-product-card:hover,
+  .ke-panel-card:hover,
+  .ke-capability-card:hover,
+  .ke-industry-card:hover,
+  .ke-process-card:hover {
+    transform: none;
+  }
+
+  .ke-product-card:hover .ke-product-image img {
+    transform: none;
+  }
+}
 
       `}</style>
 
@@ -1781,13 +2222,12 @@ function Home() {
         {/* ==================================
             1. HERO SECTION
         ================================== */}
-        <HomeSlider />
-        <IndustriesSlider />;
+        {/* <HomeSlider /> */}
         <section className="ke-hero">
           <div className="ke-hero-inner">
             <div className="ke-hero-content">
               <img
-                src="/images/komal-logo.png"
+                src="/images/home-logo.PNG"
                 alt="Komal Electricals Logo"
                 className="ke-hero-logo"
               />
@@ -1860,6 +2300,7 @@ function Home() {
             <span>SCROLL TO DISCOVER ↓</span>
           </div>
         </section>
+        <IndustriesSlider />;
         {/* ==================================
             2. COMPANY HIGHLIGHTS
         ================================== */}
